@@ -1,0 +1,17 @@
+Question 1: What happens if users choose "Cancel"?
+Nếu người dùng chọn "Cancel", biến option sẽ nhận giá trị tương ứng của JOptionPane.CANCEL_OPTION (là 2). Vì giá trị này khác với JOptionPane.YES_OPTION (là 0),
+nên toán tử 3 ngôi (option==JOptionPane.YES_OPTION?"Yes":"No") sẽ tính toán ra kết quả false và trả về chuỗi "No".
+Kết quả là chương trình vẫn sẽ in ra thông báo: "You've chosen: No".
+
+Question 2:
+Để chỉ hiển thị 2 nút "Yes" và "No": Ta cần thêm tham số loại tùy chọn (optionType) là JOptionPane.YES_NO_OPTION vào phương thức showConfirmDialog.
+Ví dụ:
+JOptionPane.showConfirmDialog(null, "Nội dung câu hỏi", "Tiêu đề", JOptionPane.YES_NO_OPTION);
+
+Để hiển thị nút với chữ tùy chọn (như "I do" và "I don't"): Ta không dùng hàm showConfirmDialog nữa mà phải sử dụng hàm JOptionPane.showOptionDialog,
+sau đó truyền vào một mảng Object chứa các câu chữ mà ta muốn hiển thị.
+Ví dụ:
+Object[] options = {"I do", "I don't"};
+JOptionPane.showOptionDialog(null, "Nội dung câu hỏi", "Tiêu đề", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+
+
