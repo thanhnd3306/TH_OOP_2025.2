@@ -1,0 +1,2 @@
+Không. Vì cả title và category đều có kiểu dữ liệu là String .
+Nếu cả hai hàm đều chỉ nhận vào một tham số kiểu String, Java sẽ bị xung đột vì không biết đang muốn gọi hàm nào.
