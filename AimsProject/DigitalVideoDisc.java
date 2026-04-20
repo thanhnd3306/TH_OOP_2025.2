@@ -30,6 +30,10 @@ public class DigitalVideoDisc {
         return cost;
     }
 
+    public int getId() {
+        return id;
+    }
+
     // 3. Setters
     public void setTitle(String title) {
         this.title = title;
