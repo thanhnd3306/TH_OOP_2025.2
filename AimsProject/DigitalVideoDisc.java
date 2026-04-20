@@ -6,6 +6,9 @@ public class DigitalVideoDisc {
     private int length;
     private float cost;
 
+    private static int nbDigitalVideoDiscs = 0;
+    private int id;
+
     // 2. Getters
     public String getTitle() {
         return title;
@@ -36,6 +39,8 @@ public class DigitalVideoDisc {
     // Create DVD by title
     public DigitalVideoDisc(String title) {
         this.title = title;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Create DVD by category, title and cost
@@ -43,6 +48,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Create DVD by director, category, title and cost
@@ -51,6 +58,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Create DVD by all attributes
@@ -60,5 +69,7 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 }
