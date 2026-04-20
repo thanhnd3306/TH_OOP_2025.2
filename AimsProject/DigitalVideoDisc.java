@@ -27,7 +27,12 @@ public class DigitalVideoDisc {
         return cost;
     }
 
-    // 3. Constructors
+    // 3. Setters
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    // 4. Constructors
     // Create DVD by title
     public DigitalVideoDisc(String title) {
         this.title = title;
